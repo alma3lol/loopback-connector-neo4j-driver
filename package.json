@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-neo4j-driver",
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0-beta.5",
   "description": "Neo4j-driver connector for loopback-datasource-juggler",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
