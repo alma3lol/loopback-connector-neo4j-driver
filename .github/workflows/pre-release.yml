@@ -19,18 +19,22 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn
-    - run: yarn build
-    - run: npm pack
-    - id: pack
-      run: echo "::set-output name=packedFileName::$(ls loopback-connector-neo4j-driver*.tgz)"
-    - name: Create pre-release
-      uses: softprops/action-gh-release@v1
-      with:
-        prerelease: true
-        files: ${{ steps.pack.outputs.packedFileName }}
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn
+      - run: yarn build
+      - run: npm pack
+      - id: pack
+        run: echo "::set-output name=packedFileName::$(ls loopback-connector-neo4j-driver*.tgz)"
+      - name: Create pre-release
+        uses: softprops/action-gh-release@v1
+        with:
+          prerelease: true
+          files: ${{ steps.pack.outputs.packedFileName }}
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
