@@ -161,6 +161,10 @@ export class Neo4jConnector extends Connector {
 							propCount[prop]++;
 							const propCountName = `${prop}${propCount[prop]}`;
 							cypherParts.push([`${operator === 'nlike' ? 'NOT ' : '' }n.${prop} CONTAINS \$${propCountName}`, propCountName, expression]);
+						} else if (operator === 'neq') {
+							propCount[prop]++;
+							const propCountName = `${prop}${propCount[prop]}`;
+							cypherParts.push([`n.${prop} <> \$${propCountName}`, propCountName, typeof expression === 'number' ? int(expression) : expression]);
 						} else {
 							debug('Unsupported operator %s in where filter', operator);
 						}
