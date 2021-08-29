@@ -3,7 +3,7 @@ import { auth, Driver, driver, Session, Record, int  } from 'neo4j-driver';
 import { ICallback, IDataSource } from './interfaces';
 import _ from 'lodash';
 import { v4 } from 'uuid';
-import { Filter, Where, Condition, AndClause, OrClause } from '@loopback/repository';
+import { Filter, Where } from '@loopback/repository';
 import moment from 'moment';
 import Debug from 'debug';
 const debug = Debug('loopback:connector:neo4j-driver');
