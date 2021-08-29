@@ -30,7 +30,7 @@ jobs:
       - run: npm pack
       - id: pack
         run: echo "::set-output name=packedFileName::$(ls loopback-connector-neo4j-driver*.tgz)"
-      - name: Create pre-release
+      - name: Create release
         uses: softprops/action-gh-release@v1
         with:
           prerelease: false
