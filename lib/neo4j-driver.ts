@@ -151,7 +151,7 @@ export class Neo4jConnector extends Connector {
 				} else {
 					if (typeof where[prop] === 'object') {
 						const operator = Object.keys(where[prop])[0];
-						const expression = where[prop][operator];
+						let expression = where[prop][operator];
 						if (_.includes(['inq', 'nin'], operator)) {
 							if (Array.isArray(expression)) {
 								propCount[prop]++;
@@ -172,6 +172,15 @@ export class Neo4jConnector extends Connector {
 							propCount[prop]++;
 							const propCountName = `${prop}${propCount[prop]}`;
 							cypherParts.push([`n.${prop} <> \$${propCountName}`, propCountName, typeof expression === 'number' ? int(expression) : expression]);
+						} else if (operator === 'regexp') {
+							if (expression) {
+								if (typeof expression === 'string') {
+									expression = new RegExp(expression);
+								}
+								propCount[prop]++;
+								const propCountName = `${prop}${propCount[prop]}`;
+								cypherParts.push([`n.${prop} =~ \$${propCountName}`, propCountName, (expression as RegExp).source]);
+							}
 						} else {
 							debug('Unsupported operator %s in where filter', operator);
 						}
