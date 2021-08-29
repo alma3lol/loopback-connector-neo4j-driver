@@ -52,8 +52,8 @@ export class Neo4jConnector extends Connector {
 	}
 
 	all = (model: string, filter: Filter, __: any, callback: ICallback) => {
-		const { where, afterReturn } = Neo4jConnector.parseFilter(filter);
-		this.session.run(`MATCH (n:${_.upperFirst(model)}) ${where[0]} RETURN n ${_.join(afterReturn.map(arr => arr[0]), ' ')}`, { ...where[1], ..._.assign({}, ...afterReturn.map(arr => arr[1])) })
+		const { where, afterReturn, returnCypher } = Neo4jConnector.parseFilter(filter);
+		this.session.run(`MATCH (n:${_.upperFirst(model)}) ${where[0]} RETURN ${returnCypher === '' ? 'n' : returnCypher } ${_.join(afterReturn.map(arr => arr[0]), ' ')}`, { ...where[1], ..._.assign({}, ...afterReturn.map(arr => arr[1])) })
 			.then(res => callback(null, res.records.map(this.extractNode)))
 			.catch(callback);
 	}
@@ -98,7 +98,7 @@ export class Neo4jConnector extends Connector {
 	}
 
 	static parseFilter = (filter: Filter = {}) => {
-		const parsedFilter: { where: [string, any], afterReturn: [string, any][] } = { where: Neo4jConnector.parseWhere(filter.where), afterReturn: [] };
+		const parsedFilter: { where: [string, any], afterReturn: [string, any][], returnCypher: string } = { where: Neo4jConnector.parseWhere(filter.where), afterReturn: [], returnCypher: '' };
 		if (filter.order && filter.order.length > 0) {
 			parsedFilter.afterReturn.push([`ORDER BY ${_.join(filter.order.map(order => `n.${order}`), ', ')}`, {}])
 		}
@@ -107,6 +107,13 @@ export class Neo4jConnector extends Connector {
 		}
 		if (filter.limit) {
 			parsedFilter.afterReturn.push(['LIMIT $limit', { limit: int(filter.limit) }])
+		}
+		if (filter.fields) {
+			const fieldsToReturn: string[] = [];
+			for (const field in filter.fields) {
+				if ((filter.fields as Object).hasOwnProperty(field)) fieldsToReturn.push(`n.${field}`);
+			}
+			parsedFilter.returnCypher = fieldsToReturn.length > 0 ? _.join(fieldsToReturn, ', ') : '';
 		}
 		return parsedFilter;
 	}
