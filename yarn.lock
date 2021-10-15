@@ -1279,24 +1279,24 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@loopback/filter@^1.5.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@loopback/filter/-/filter-1.5.2.tgz#2f5b94e38a1e409e3a305b909089ed8e617007a7"
-  integrity sha512-p88/OqIgqxxFD2pZJqz5oCVqjERyWkFuLM8NBgmda7IGz+dQHmQebTsex1ywi9lrDX4KIV0lqRa9aYce13tA3g==
+"@loopback/filter@^1.5.3":
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/@loopback/filter/-/filter-1.5.3.tgz#a521f8d73d90509595065872eb5a571910327a07"
+  integrity sha512-BH89usaeqS2fQ6mB+Hf1wfa66uJ92CkxaixXlXR/mFk62b20sD6t9SrB+IJGg7aK3Ugw3UcvAsn+O8U3f2E8/w==
   dependencies:
-    tslib "^2.3.0"
+    tslib "^2.3.1"
 
 "@loopback/repository@^3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@loopback/repository/-/repository-3.7.1.tgz#cb5413370c08d92fe358167db08d3a5217100746"
-  integrity sha512-q9vpgQ5MSZqI/ww2TTuDy0Y34NZaapS0+4ZKcwVgwH0XJFxgGwznc5W0l1Esu1lplijejpza4ItKwnlGmvYcJg==
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/@loopback/repository/-/repository-3.7.2.tgz#9d13b29b029e53a75ee764a4a47dab784cf8a432"
+  integrity sha512-+oaLYyXKRXUOGRH1CDLLEBIKysRoPgRG5Q1DpkVlxFZIGzARxRJefQI1ZzjPOXX9GO5LHhGV/lnwESBARRmCqw==
   dependencies:
-    "@loopback/filter" "^1.5.2"
-    "@types/debug" "^4.1.5"
-    debug "^4.3.1"
+    "@loopback/filter" "^1.5.3"
+    "@types/debug" "^4.1.7"
+    debug "^4.3.2"
     lodash "^4.17.21"
     loopback-datasource-juggler "^4.26.0"
-    tslib "^2.3.0"
+    tslib "^2.3.1"
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
@@ -1370,7 +1370,7 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/debug@^4.1.5":
+"@types/debug@^4.1.7":
   version "4.1.7"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
   integrity sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==
@@ -1982,7 +1982,7 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.1:
+debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
   integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
@@ -3912,7 +3912,7 @@ tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.3, tslib@^2.3.0:
+tslib@^2.0.3, tslib@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
