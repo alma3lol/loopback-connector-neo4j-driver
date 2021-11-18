@@ -1274,19 +1274,19 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@loopback/filter@^1.5.4":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@loopback/filter/-/filter-1.5.4.tgz#daa3094dec4c601c598bd9bff44365300a79885f"
-  integrity sha512-kfdCgSy0YoAFNYXJOpag5uJnlErYcROIeJqeAglkwOa3hSw2BYIudurU8hoqsiOBIGhI5BF4A3S8u4q089xWlg==
+"@loopback/filter@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@loopback/filter/-/filter-2.0.0.tgz#84d8ad89c184f83db5f28ff70c97716074b47f7f"
+  integrity sha512-5YsMlp5wucVc8rW/CJahGi+GTNrQMDZJaGIQuZL3yIfHPAcjNyQlk+AQrLHJxbyTM5jGOwf9oY2SATKn06JUew==
   dependencies:
     tslib "^2.3.1"
 
-"@loopback/repository@^3.7.1":
-  version "3.7.3"
-  resolved "https://registry.yarnpkg.com/@loopback/repository/-/repository-3.7.3.tgz#c3f4b37ce57d3b49dae77d172d108526f5bd740a"
-  integrity sha512-yN6dFMs1j4FpowqID6tsZsPlDfL79fxeDKWKaJ7HyOf/8MT/9pjb0unrwFy71lLgyZwH38C8dNF1+kUOulp1fQ==
+"@loopback/repository@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@loopback/repository/-/repository-4.0.0.tgz#de0b4a2c7db9a648420f247b1c57d17a9b75ebc9"
+  integrity sha512-kOcm94plGqkXhuYf4Iw2NsoGFyjmbKoDNAw8MDRIQQjaHdpat0TeMIbslvs5AmU42nKkmbvc+xRIyTdntfAHxA==
   dependencies:
-    "@loopback/filter" "^1.5.4"
+    "@loopback/filter" "^2.0.0"
     "@types/debug" "^4.1.7"
     debug "^4.3.2"
     lodash "^4.17.21"
