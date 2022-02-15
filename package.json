@@ -13,7 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@loopback/repository": "^3.7.1",
+    "@loopback/repository": "^4.1.0",
     "lodash": "^4.17.21",
     "loopback-connector": "^5.0.1",
     "moment": "^2.29.1",
