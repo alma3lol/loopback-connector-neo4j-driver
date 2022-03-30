@@ -1274,23 +1274,23 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@loopback/filter@^1.5.4":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@loopback/filter/-/filter-1.5.4.tgz#daa3094dec4c601c598bd9bff44365300a79885f"
-  integrity sha512-kfdCgSy0YoAFNYXJOpag5uJnlErYcROIeJqeAglkwOa3hSw2BYIudurU8hoqsiOBIGhI5BF4A3S8u4q089xWlg==
+"@loopback/filter@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@loopback/filter/-/filter-2.1.2.tgz#67c62395b7f9ba43cb93e5c602eba36bafc572ed"
+  integrity sha512-WeS2JGz5uHaV5zQm1KfsabjfscCE6b2evsuBkWtzgIO2aSCkZwNA4zi4cDYy8iIL4/58ABbRCbJ7Kbj4OXmocw==
   dependencies:
     tslib "^2.3.1"
 
-"@loopback/repository@^3.7.1":
-  version "3.7.3"
-  resolved "https://registry.yarnpkg.com/@loopback/repository/-/repository-3.7.3.tgz#c3f4b37ce57d3b49dae77d172d108526f5bd740a"
-  integrity sha512-yN6dFMs1j4FpowqID6tsZsPlDfL79fxeDKWKaJ7HyOf/8MT/9pjb0unrwFy71lLgyZwH38C8dNF1+kUOulp1fQ==
+"@loopback/repository@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@loopback/repository/-/repository-4.1.2.tgz#630eacfcc66070f3c3972b8b1ce5f833afa4e910"
+  integrity sha512-/si9AMnjxNv7c7d/fMCe0InncPEioHWfz3o317pvDIGL2TvwlBE3pwo9OE6qLa2rqC8ZxD1mU1NZZNUJ818qhw==
   dependencies:
-    "@loopback/filter" "^1.5.4"
+    "@loopback/filter" "^2.1.2"
     "@types/debug" "^4.1.7"
-    debug "^4.3.2"
+    debug "^4.3.4"
     lodash "^4.17.21"
-    loopback-datasource-juggler "^4.26.0"
+    loopback-datasource-juggler "^4.27.1"
     tslib "^2.3.1"
 
 "@sinonjs/commons@^1.7.0":
@@ -1972,10 +1972,10 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
-  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
+debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
+  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
   dependencies:
     ms "2.1.2"
 
@@ -3054,10 +3054,10 @@ loopback-connector@^5.0.0, loopback-connector@^5.0.1:
     strong-globalize "^6.0.4"
     uuid "^8.3.0"
 
-loopback-datasource-juggler@^4.26.0:
-  version "4.26.0"
-  resolved "https://registry.yarnpkg.com/loopback-datasource-juggler/-/loopback-datasource-juggler-4.26.0.tgz#925522f184b049c753f701292b703c9dc5aaf293"
-  integrity sha512-/R40jUGDrnRBgTh121L4Y7sHDF0KxbgSAN4gLJKp8xGNQ6KpkSQyqZkmap98eN7B75RES78DS3MGghsYMvAJ3Q==
+loopback-datasource-juggler@^4.27.1:
+  version "4.27.1"
+  resolved "https://registry.yarnpkg.com/loopback-datasource-juggler/-/loopback-datasource-juggler-4.27.1.tgz#c37a53b9ece9cb301a8dbf9f260edbf56969a1b3"
+  integrity sha512-tZ+NB55F/syrFAOBAndKXKERKmFU7w0UYT6NhbQqLFSc2eVmrk4Wfx3lULGYB9UCJAJIeDoCXJYvjThaeZ3TCQ==
   dependencies:
     async "^3.1.0"
     change-case "^4.1.1"
@@ -3067,8 +3067,8 @@ loopback-datasource-juggler@^4.26.0:
     lodash "^4.17.11"
     loopback-connector "^5.0.0"
     minimatch "^3.0.3"
+    nanoid "^3.1.20"
     qs "^6.5.0"
-    shortid "^2.2.6"
     strong-globalize "^6.0.5"
     traverse "^0.6.6"
     uuid "^8.3.1"
@@ -3198,10 +3198,10 @@ msgpack5@^4.2.0:
     readable-stream "^2.3.6"
     safe-buffer "^5.1.2"
 
-nanoid@^2.1.0:
-  version "2.1.11"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.11.tgz#ec24b8a758d591561531b4176a01e3ab4f0f0280"
-  integrity sha512-s/snB+WGm6uwi0WjsZdaVcuf3KJXlfGl2LcxgwkEwJF0D/BWzVWAZW/XY4bFaiR7s0Jk3FPvlnepg1H1b1UwlA==
+nanoid@^3.1.20:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.2.tgz#c89622fafb4381cd221421c69ec58547a1eec557"
+  integrity sha512-CuHBogktKwpm5g2sRgv83jEy2ijFzBwMoYA60orPDR7ynsLijJDqgsi4RDGj3OJpy3Ieb+LYwiRmIOGyytgITA==
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -3660,13 +3660,6 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
-
-shortid@^2.2.6:
-  version "2.2.16"
-  resolved "https://registry.yarnpkg.com/shortid/-/shortid-2.2.16.tgz#b742b8f0cb96406fd391c76bfc18a67a57fe5608"
-  integrity sha512-Ugt+GIZqvGXCIItnsL+lvFJOiN7RYqlGy7QE41O3YC1xbNSeDGIRO7xg2JJXIAj1cAGnOeC1r7/T9pgrtQbv4g==
-  dependencies:
-    nanoid "^2.1.0"
 
 side-channel@^1.0.4:
   version "1.0.4"
